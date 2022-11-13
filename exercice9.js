@@ -1,4 +1,8 @@
-let nombre = parseInt(prompt("Entrez un nombre"));
+let nombre = (prompt("Entrez un nombre"));
+while (isNaN(nombre)) {
+    nombre = prompt("Entre un nombre");
+}
+nombre = parseInt(nombre)
 const nombrefixe = nombre;
 let table = "";
 

@@ -1,8 +1,12 @@
-let nombre = parseInt(prompt("Entrez un nombre"));
-let nombreAdditionne = 1
+let nombre = (prompt("Entrez un nombre"));
+while (isNaN(nombre)) {
+    nombre = prompt("Entre un nombre");
+}
+nombre = parseInt(nombre)
+
 let somme = 0
-while (nombreAdditionne <= nombre) {
-    somme += nombreAdditionne
-    nombreAdditionne++
+
+for (let i = 1; i <= nombre; i++) {
+    somme += i
 }
 alert(somme);

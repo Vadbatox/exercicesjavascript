@@ -1,4 +1,7 @@
 let nombre = prompt("Veuillez entre un nombre compris entre 10 et 20");
+while (isNaN(nombre)) {
+    nombre = prompt("Veuillez entre un nombre compris entre 10 et 20");
+}
 
 while (nombre <= 10 || nombre >= 20) {
     if (nombre < 10) {

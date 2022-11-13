@@ -1,22 +1,30 @@
-let Nombres = [];
+let nombres = [];
 let i = 1;
+let nombre;
 
-Nombres.push(prompt("Entrez le nombre numero " + i + " :"))
+while (isNaN(nombre)) {
+    nombre = Number(prompt("Entre le nombre numero  :" + i))
+    nombres.push(nombre)
+}
 
-while (Nombres.slice(-1) != 0) {
+while (nombres.slice(-1) != 0) {
     i++
-    Nombres.push(prompt("Entrez le nombre numero " + i + " :"))
+    nombre = Number(prompt("Entre le nombre numero  :" + i))
+    while (isNaN(nombre) || nombres.includes(nombre) == true) {
+        nombre = Number(prompt("Entre le nombre numero  :" + i))
+    }
+    nombres.push(nombre)
 
 }
 
-Nombres.pop()
+nombres.pop()
 
-let plusGrandNombre = Math.max.apply(null, Nombres);
+let plusGrandNombre = Number(Math.max.apply(null, nombres));
 
 alert("Le plus grand nombre est : " + plusGrandNombre);
 
 let a = 0;
-while (plusGrandNombre != Nombres[a]) {
+while (plusGrandNombre != nombres[a]) {
     a++;
 }
 alert("C’était le nombre numéro " + (parseInt(a) + 1));

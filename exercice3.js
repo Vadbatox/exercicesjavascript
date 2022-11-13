@@ -1,6 +1,13 @@
 let a = prompt("Entrez la valeur de A");
+while (isNaN(a)) {
+    a = prompt("Entrez la valeur de A")
+}
 alert("La valeur de A est :" + a)
+
 let b = prompt("Entrez la valeur de B");
+while (isNaN(b)) {
+    b = prompt("Entrez la valeur de B")
+}
 alert("La valeur de B est: " + b)
 let c;
 c = a;

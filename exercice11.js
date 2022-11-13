@@ -1,8 +1,15 @@
-let nombre = parseInt(prompt("Entrez un nombre"));
-let nombreMultiplie = 1
-let factorielle = 1
-while (nombreMultiplie <= nombre) {
-    factorielle *= nombreMultiplie
-    nombreMultiplie++
+let nombre = (prompt("Entrez un nombre"));
+while (isNaN(nombre)) {
+    nombre = prompt("Veuillez entrez un nombre :");
 }
-alert(factorielle);
+nombre = parseInt(nombre)
+
+function NombreMultiplie(a) {
+    if (a == 0) {
+        return 1;
+    } else {
+        return (a * NombreMultiplie(a - 1));
+    }
+}
+
+alert(NombreMultiplie(nombre));

@@ -1,11 +1,15 @@
-let nombre = parseInt(prompt("Entrez un nombre"));
+let nombre = (prompt("Entrez un nombre"));
+while (isNaN(nombre)) {
+    nombre = prompt("Entrez un nombre ");
+}
+nombre = parseInt(nombre)
 let controle = nombre + (10);
 let number = nombre;
-let nombresSuivant = ""
+let nombresSuivant = []
 
-while (number <= controle) {
+while (number < controle) {
     number++;
-    nombresSuivant += number + ";" + " ";
+    nombresSuivant.push(number)
 
 }
 
