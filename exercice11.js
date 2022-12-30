@@ -4,12 +4,12 @@ while (isNaN(nombre)) {
 }
 nombre = parseInt(nombre)
 
-function NombreMultiplie(a) {
+function nombreMultiplie(a) {
     if (a == 0) {
         return 1;
     } else {
-        return (a * NombreMultiplie(a - 1));
+        return (a * nombreMultiplie(a - 1));
     }
 }
 
-alert(NombreMultiplie(nombre));
+alert(nombreMultiplie(nombre));

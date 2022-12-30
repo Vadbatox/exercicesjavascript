@@ -1,6 +1,6 @@
 let annee = prompt("Entrez une année");
 while (isNaN(annee)) {
-    annn = prompt("Entrez une année")
+    annee = prompt("Entrez une année")
 }
 let divisibleQuatre = annee % 4;
 let divisibleCent = annee % 100;
